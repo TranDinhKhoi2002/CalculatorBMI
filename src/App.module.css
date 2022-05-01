@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+  margin-bottom: 50px;
+}
+
+.headerContainer {
+  max-width: 1200px;
+  margin: 40px auto;
+  color: #6a7d8b;
+  padding: 0 20px;
+}
+
+.container {
+  display: flex;
+  margin: auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.leftSide {
+  flex: 1;
+  margin-right: 40px;
+}
+
+.leftSide h1 {
+  font-size: 40px;
+  color: #3a4b5c;
+}
+
+.leftSide p {
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: #6a7d8b;
+}
+
+.leftSide input {
+  width: 100%;
+  border: none;
+  border-bottom: 3px solid #6a7d8b;
+  padding: 10px 2px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+.leftSide input:disabled {
+  opacity: 0.5;
+  cursor: no-drop;
+}
+
+.leftSide button {
+  width: 100%;
+  background-color: #227c9d;
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-top: 40px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.leftSide button:hover {
+  opacity: 0.8;
+}
+
+.leftSide button:disabled {
+  opacity: 0.5;
+  cursor: no-drop;
+}
+
+.rightSide {
+  flex: 1;
+  display: flex;
+  margin-left: 40px;
+}
+
+.rightSide .grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.rightSide .rightBig {
+  flex: 1;
+  display: flex;
+}
+
+.rightSide .arrow {
+  position: absolute;
+  background-color: #227c9d;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -35px;
+  margin-top: 145px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.rightSide .arrow:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .leftSide {
+    margin-right: 0;
+  }
+
+  .rightSide {
+    margin-left: 0;
+    margin-top: 50px;
+  }
+
+  .rightSide .arrow {
+    margin: 0;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .rightSide .grid {
+    grid-template-columns: 1fr;
+  }
+}
